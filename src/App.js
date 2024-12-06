@@ -51,7 +51,8 @@ import StarRating from "./StarRating";
 const average = (arr) =>
   arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
 
-const key = "b348f9ed";
+const apiKey = process.env.REACT_APP_API_KEY
+const apiUrl = process.env.REACT_APP_API_URL
 
 export default function App() {
   const [query, setQuery] = useState("");
@@ -85,7 +86,7 @@ export default function App() {
         setIsLoading(true);
         setError("");
         const response = await fetch(
-          `http://www.omdbapi.com/?apikey=${key}&s=${query}`,
+          `${apiUrl}/?apikey=${apiKey}&s=${query}`,
           { signal: controller.signal }
         );
         if (!response.ok) {
@@ -286,7 +287,7 @@ const MovieDetails = ({ selectedId, onCloseMovie, onAddWatched, watched }) => {
     const getMovieDetails = async () => {
       setIsLoading(true);
       const response = await fetch(
-        `http://www.omdbapi.com/?apikey=${key}&i=${selectedId}`
+        `${apiUrl}/?apikey=${apiKey}&i=${selectedId}`
       );
       if (!response.ok) {
         throw new Error("Error fetching movie details");
