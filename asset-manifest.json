@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/filmflow/static/css/main.9a4eb742.css",
-    "main.js": "/filmflow/static/js/main.ecb7afd3.js",
+    "main.js": "/filmflow/static/js/main.3ae5cad8.js",
     "index.html": "/filmflow/index.html",
     "main.9a4eb742.css.map": "/filmflow/static/css/main.9a4eb742.css.map",
-    "main.ecb7afd3.js.map": "/filmflow/static/js/main.ecb7afd3.js.map"
+    "main.3ae5cad8.js.map": "/filmflow/static/js/main.3ae5cad8.js.map"
   },
   "entrypoints": [
     "static/css/main.9a4eb742.css",
-    "static/js/main.ecb7afd3.js"
+    "static/js/main.3ae5cad8.js"
   ]
 }
